@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100d18">
+
+  <title>Olhares — Galeria Colaborativa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="ambient ambient-one"></div>
+<div class="ambient ambient-two"></div>
+
+<header class="navbar">
+  <a href="#" class="brand">
+    <span class="brand-icon">o.</span>
+    <span>olhares<span class="brand-dot">.</span></span>
+  </a>
+
+  <nav class="nav-links">
+    <a href="#inicio">Início</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#sobre">Como funciona</a>
+  </nav>
+
+  <button class="nav-button" id="navCreate">
+    Criar uma sala <span>↗</span>
+  </button>
+
+  <button class="mobile-menu" id="mobileMenu" aria-label="Abrir menu">☰</button>
+</header>
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        <span class="live-dot"></span>
+        UM UNIVERSO DE CRIATIVIDADE COMPARTILHADA
+      </div>
+
+      <h1>
+        Uma imagem.<br>
+        <span class="gradient-text">Infinitas</span><br>
+        possibilidades.
+      </h1>
+
+      <p class="hero-description">
+        A fotografia é só o começo. Compartilhe uma imagem,
+        descubra novos olhares e veja diferentes pessoas
+        transformarem a mesma história.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="button-primary" id="heroCreate">
+          Começar agora <span>↗</span>
+        </button>
+
+        <a href="#galeria" class="button-secondary">
+          Explorar galeria <span>↓</span>
+        </a>
+      </div>
+
+      <div class="hero-social">
+        <div class="avatar-stack">
+          <span>J</span>
+          <span>M</span>
+          <span>A</span>
+          <span>+</span>
+        </div>
+
+        <div>
+          <strong>Uma criação coletiva</strong>
+          <small>Feita por diferentes perspectivas.</small>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COLAGEM VISUAL -->
+
+    <div class="hero-visual">
+
+      <div class="visual-glow"></div>
+
+      <div class="floating-label label-top">
+        <span class="label-icon">✦</span>
+        Cada olhar é único
+      </div>
+
+      <div class="collage-main">
+        <img
+          src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=900&auto=format&fit=crop"
+          alt="Paisagem com montanhas e luz do amanhecer"
+        >
+
+        <div class="image-overlay">
+          <span>01 — ORIGINAL</span>
+          <strong>O mundo em novas perspectivas.</strong>
+        </div>
+      </div>
+
+      <div class="collage-small collage-left">
+        <img
+          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop"
+          alt="Paisagem natural"
+        >
+        <span>Outro olhar</span>
+      </div>
+
+      <div class="collage-small collage-right">
+        <img
+          src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=500&auto=format&fit=crop"
+          alt="Lago entre montanhas"
+        >
+        <span>Nova perspectiva</span>
+      </div>
+
+      <div class="floating-label label-bottom">
+        <span>✧</span> CRIATIVIDADE SEM LIMITES
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FAIXA DE DESTAQUE -->
+
+  <section class="feature-strip">
+    <div><span>✳</span> Compartilhe experiências</div>
+    <div><span>✳</span> Descubra perspectivas</div>
+    <div><span>✳</span> Crie novas versões</div>
+    <div><span>✳</span> Construa juntos</div>
+  </section>
+
+  <!-- GALERIA -->
+
+  <section class="gallery-section" id="galeria">
+
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow">UM ESPAÇO PARA EXPLORAR</div>
+        <h2>Olhares que se <span class="gradient-text">encontram.</span></h2>
+        <p>Uma prévia de como as galerias colaborativas poderão funcionar.</p>
+      </div>
+
+      <div class="gallery-count">
+        <span class="live-dot"></span>
+        GALERIA DE DEMONSTRAÇÃO
+      </div>
+    </div>
+
+    <div class="workspace">
+
+      <aside class="sidebar">
+
+        <div class="sidebar-title">ESPAÇO DE CRIAÇÃO</div>
+
+        <div class="room-active">
+          <span class="room-icon">✦</span>
+          <div>
+            <strong id="activeRoom">Sala inspiração</strong>
+            <small>Ambiente demonstrativo</small>
+          </div>
+          <span class="room-indicator"></span>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <span class="sidebar-label">SUA SALA</span>
+
+        <button class="sidebar-action" id="createRoom">
+          <span>＋</span> Criar nova sala
+        </button>
+
+        <div class="join-box">
+          <label for="roomCodeInput">ENTRAR COM CÓDIGO</label>
+          <input id="roomCodeInput" placeholder="Ex.: FOTO-123ABC">
+          <button id="joinRoom">Entrar na sala ↗</button>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="sidebar-note">
+          <span class="note-icon">✧</span>
+          <strong>Ideias ganham vida juntas.</strong>
+          <p>Compartilhe sua sala e convide outras pessoas para criar.</p>
+        </div>
+
+      </aside>
+
+      <div class="gallery-main">
+
+        <div class="gallery-toolbar">
+          <div>
+            <span class="eyebrow">GALERIA COMPARTILHADA</span>
+            <h3 id="galleryTitle">Inspiração visual</h3>
+          </div>
+
+          <button class="button-primary upload-button" id="uploadButton">
+            <span>＋</span> Adicionar foto
+          </button>
+
+          <input
+            type="file"
+            id="fileInput"
+            accept="image/*"
+            multiple
+            hidden
+          >
+        </div>
+
+        <div class="gallery-filters">
+          <button class="filter active" data-filter="all">Todas</button>
+          <button class="filter" data-filter="original">Originais</button>
+          <button class="filter" data-filter="edited">Novas versões</button>
+
+          <span class="photo-total" id="photoCount">06 fotografias</span>
+        </div>
+
+        <div class="photo-grid" id="photoGrid">
+
+          <article class="photo-card" data-type="original">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800&auto=format&fit=crop" alt="Montanhas">
+              <span class="photo-tag">ORIGINAL</span>
+              <button class="image-open" data-image="0">↗</button>
+            </div>
+            <div class="photo-info">
+              <div>
+                <strong>Entre montanhas</strong>
+                <small>Por Marina · Fotografia original</small>
+              </div>
+              <span class="card-number">01</span>
+            </div>
+          </article>
+
+          <article class="photo-card" data-type="original">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&auto=format&fit=crop" alt="Amanhecer">
+              <span class="photo-tag">ORIGINAL</span>
+              <button class="image-open" data-image="1">↗</button>
+            </div>
+            <div class="photo-info">
+              <div>
+                <strong>Luz do amanhecer</strong>
+                <small>Por Gabriel · Fotografia original</small>
+              </div>
+              <span class="card-number">02</span>
+            </div>
+          </article>
+
+          <article class="photo-card" data-type="edited">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800&auto=format&fit=crop" alt="Lago">
+              <span class="photo-tag edited-tag">NOVA VERSÃO</span>
+              <button class="image-open" data-image="2">↗</button>
+            </div>
+            <div class="photo-info">
+              <div>
+                <strong>Silêncio natural</strong>
+                <small>Por Ana · Edição colaborativa</small>
+              </div>
+              <span class="card-number">03</span>
+            </div>
+          </article>
+
+          <article class="photo-card" data-type="original">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop" alt="Natureza">
+              <span class="photo-tag">ORIGINAL</span>
+              <button class="image-open" data-image="3">↗</button>
+            </div>
+            <div class="photo-info">
+              <div>
+                <strong>Natureza viva</strong>
+                <small>Por Lucas · Fotografia original</small>
+              </div>
+              <span class="card-number">04</span>
+            </div>
+          </article>
+
+          <article class="photo-card" data-type="edited">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&auto=format&fit=crop" alt="Paisagem de lago">
+              <span class="photo-tag edited-tag">NOVA VERSÃO</span>
+              <button class="image-open" data-image="4">↗</button>
+            </div>
+            <div class="photo-info">
+              <div>
+                <strong>Um novo horizonte</strong>
+                <small>Por Júlia · Edição colaborativa</small>
+              </div>
+              <span class="card-number">05</span>
+            </div>
+          </article>
+
+          <article class="photo-card" data-type="original">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&auto=format&fit=crop" alt="Oceano">
+              <span class="photo-tag">ORIGINAL</span>
+              <button class="image-open" data-image="5">↗</button>
+            </div>
+            <div class="photo-info">
+              <div>
+                <strong>Além do horizonte</strong>
+                <small>Por Pedro · Fotografia original</small>
+              </div>
+              <span class="card-number">06</span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="gallery-bottom">
+          <span>✧</span>
+          Cada fotografia pode ganhar novas interpretações.
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- COMO FUNCIONA -->
+
+  <section class="steps-section" id="sobre">
+
+    <div class="section-heading centered">
+      <div class="eyebrow">SIMPLES ASSIM</div>
+      <h2>Uma ideia. <span class="gradient-text">Muitas mãos.</span></h2>
+      <p>Uma experiência pensada para conectar pessoas através da fotografia.</p>
+    </div>
+
+    <div class="steps-grid">
+
+      <article class="step-card">
+        <span class="step-number">01</span>
+        <div class="step-icon">✦</div>
+        <h3>Crie sua sala</h3>
+        <p>Inicie um espaço de criação e convide outras pessoas usando um código.</p>
+      </article>
+
+      <article class="step-card">
+        <span class="step-number">02</span>
+        <div class="step-icon">▧</div>
+        <h3>Compartilhe imagens</h3>
+        <p>Envie uma fotografia e permita que outras pessoas conheçam sua perspectiva.</p>
+      </article>
+
+      <article class="step-card">
+        <span class="step-number">03</span>
+        <div class="step-icon">✧</div>
+        <h3>Transforme juntos</h3>
+        <p>Crie novas versões, experimente ideias e descubra possibilidades diferentes.</p>
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- CHAMADA FINAL -->
+
+  <section class="final-cta">
+    <div class="cta-decoration">✳</div>
+    <div class="eyebrow">SUA CRIATIVIDADE TEM ESPAÇO</div>
+    <h2>O próximo olhar<br>pode ser <span class="gradient-text">o seu.</span></h2>
+    <p>Entre nessa experiência e descubra o poder de criar em conjunto.</p>
+    <button class="button-primary" id="finalCreate">
+      Criar minha sala <span>↗</span>
+    </button>
+  </section>
+
+</main>
+
+<footer class="footer">
+
+  <div class="footer-brand">
+    <a href="#" class="brand">
+      <span class="brand-icon">o.</span>
+      <span>olhares<span class="brand-dot">.</span></span>
+    </a>
+
+    <p>Galeria Colaborativa</p>
+    <small>Um espaço onde diferentes olhares se encontram.</small>
+  </div>
+
+  <div class="footer-credit">
+    <span>PROJETO ESCOLAR · TURMA 3N01</span>
+    <strong>Desenvolvido por Thierry</strong>
+    <small>Thierry Developer · © 2026</small>
+  </div>
+
+</footer>
+
+<!-- MODAL DE EDIÇÃO -->
+
+<div class="modal" id="editorModal">
+  <div class="modal-box">
+
+    <div class="modal-header">
+      <div>
+        <span class="eyebrow">ESTÚDIO CRIATIVO</span>
+        <h3>Transforme sua fotografia.</h3>
+      </div>
+      <button class="modal-close" id="closeEditor">✕</button>
+    </div>
+
+    <canvas id="editorCanvas"></canvas>
+
+    <div class="editor-controls">
+
+      <label>
+        Brilho
+        <input type="range" id="brightness" min="50" max="160" value="100">
+      </label>
+
+      <label>
+        Contraste
+        <input type="range" id="contrast" min="50" max="160" value="100">
+      </label>
+
+      <label>
+        Texto na imagem
+        <input type="text" id="overlayText" placeholder="Escreva algo...">
+      </label>
+
+      <label>
+        Seu nome
+        <input type="text" id="editorName" placeholder="Seu nome">
+      </label>
+
+    </div>
+
+    <div class="editor-actions">
+      <button class="button-secondary" id="rotateImage">↻ Girar</button>
+      <button class="button-secondary" id="resetEditor">Redefinir</button>
+      <button class="button-primary" id="saveVersion">Salvar nova versão</button>
+    </div>
+
+    <p class="editor-disclaimer">
+      Demonstração visual: as edições ficam armazenadas apenas nesta sessão.
+    </p>
+
+  </div>
+</div>
+
+<!-- MODAL DE VISUALIZAÇÃO -->
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="closeLightbox">✕</button>
+  <img id="lightboxImage" src="" alt="Fotografia ampliada">
+</div>
+
+<div class="toast" id="toast"></div>
+
+</body>
+</html>
